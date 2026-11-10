@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800');
+body{
+    margin: 0;
+    font-family: Oswald;
+    background-color: #D7F5F9;
+}
+.cabecera {
+background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/Fondo-cabecera.png);
+color: #ACD5E7; text-align:center;
+padding: 100px; background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+font-size: 60px; z-index: 1000;
+position: sticky; top: 0;
+animation: mover auto linear both;
+animation-timeline: scroll(root);
+animation-range: 0% 30%
+}
+.subtitulo{
+    size:10px;
+}
+.contenedor{
+    display: grid; justify-content: left;
+    align-items: center; width: 60%;
+    padding: 100px; border-radius: 50px;
+    border-style: solid; border-color: #95B9EE;
+    box-shadow: 0 8px 16px rgba(79, 139, 207, 0.438);
+    margin-left: auto; margin-right: auto;
+    background-color: #bfecf7;
+    font-family: Open Sans; font-size: 20px;
+}
+.contenido {padding: 14px;}
+.pie {
+background-color: #1f2937;
+color: #e5e7eb;
+font-size: 12px; padding: 10px;
+}
+.menu{
+    display: flex; align-items:center;
+    gap: 200px; padding: 12px 20px;
+    background-color: #8CC5DE;
+    position:sticky;
+    animation: drag auto linear both;
+    animation-range: 0% 5%;
+    animation-timeline: scroll(root)
+}
+.opcion{
+    color: black; text-decoration: none;
+    padding: 8px 14px; border-radius: 6px;
+}
+.form{
+    margin-left: 170px; margin-right: auto;
+}
+.boton{
+    padding: 20px; border-radius: 10px;
+    background-color: #96cdf1;
+    font-size: 20px; font-family: Open sans;
+            border: solid;    
+    border-color: #2f7db1;
+}
+.comentario{
+    padding: 15px; width: 200px;
+    border-radius: 15px;
+    background-color: #ddf5ff;
+    font-size: 15px;
+    border-color: #6ba8da;
+}
+.select{
+    padding: 10px; background-color: #d4efff;
+    border-radius: 5px; border: 3px solid #7ba6c4;
+}
+.select :focus{
+    transition: 40ms;
+    outline: solid 3px #000000;}
+.comentario:focus{
+    transition: 100ms;
+    outline: solid 3px #6d9fce;
+}
+.boton:hover{
+    transition: 40ms;
+    background-color: #6796d6;
+    border-color: #21588b;
+}
+.boton:active{
+    transition: 100ms;
+    border: solid;    
+    border-color: #2f7db1;
+    background-color: #96cdf1;
+}
+@keyframes mover{
+    to{
+        padding:10px 20px;
+        padding-bottom: 10px
+    }   
+}
+@keyframes drag{
+    from{
+        top: 260px;
+    }
+    to{
+        top: 196px;
+    }
+}
